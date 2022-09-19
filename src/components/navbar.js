@@ -40,13 +40,13 @@ export default function Navbar() {
                     <div className="flex-shrink-0 flex items-center">
                     <img
                         className="block lg:hidden h-8 w-auto"
-                        src="https://github.com/jevonadelwin7/J5-CARD/blob/gh-pages/j5logo.png"
-                        alt="Workflow"
+                        src="https://raw.githubusercontent.com/jevonadelwin7/J5-CARD/gh-pages/j5logo.png"
+                        alt="J5ro"
                     />
                     <img
                         className="hidden lg:block h-8 w-auto"
-                        src="https://github.com/jevonadelwin7/J5-CARD/blob/gh-pages/j5logo.png"
-                        alt="Workflow"
+                        src="https://raw.githubusercontent.com/jevonadelwin7/J5-CARD/gh-pages/j5logo.png"
+                        alt="J5ro"
                     />
                     </div>
                     <div className="hidden sm:block sm:ml-6">
