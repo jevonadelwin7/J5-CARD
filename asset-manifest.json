@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/J5-CARD/static/css/main.44864292.css",
-    "main.js": "/J5-CARD/static/js/main.81aca746.js",
+    "main.js": "/J5-CARD/static/js/main.0b48faf8.js",
     "static/js/787.ae862dbe.chunk.js": "/J5-CARD/static/js/787.ae862dbe.chunk.js",
     "static/media/logo.svg": "/J5-CARD/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/J5-CARD/index.html",
     "main.44864292.css.map": "/J5-CARD/static/css/main.44864292.css.map",
-    "main.81aca746.js.map": "/J5-CARD/static/js/main.81aca746.js.map",
+    "main.0b48faf8.js.map": "/J5-CARD/static/js/main.0b48faf8.js.map",
     "787.ae862dbe.chunk.js.map": "/J5-CARD/static/js/787.ae862dbe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44864292.css",
-    "static/js/main.81aca746.js"
+    "static/js/main.0b48faf8.js"
   ]
 }
