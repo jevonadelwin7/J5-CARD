@@ -15,7 +15,7 @@ const products = [
         imageSrc: 'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/906/miyako_miyako-wd-190-ph-dispenser--hot--normal-_full04.jpg',
         imageAlt: "Dispenser Hot Normal",
         price: '250 Kupon',
-        status: 'Habis',
+        status: 'Tersedia',
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const products = [
         imageSrc: 'https://www.miyako.co.id/wp-content/uploads/2019/05/1-12.jpg',
         imageAlt: "Kipas Angin Stand Fan",
         price: '350 Kupon',
-        status: 'Habis',
+        status: 'Tersedia',
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const products = [
         imageSrc: 'https://www.miyako.co.id/wp-content/uploads/2019/05/MCM-528-cover.png',
         imageAlt: "Magic Warmer",
         price: '350 Kupon',
-        status: 'Habis',
+        status: 'Tersedia',
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ const products = [
         imageSrc: 'https://id-test-11.slatic.net/p/099caa926bfc80857d65a974c6b77c22.jpg',
         imageAlt: "Miyako Mixer",
         price: '350 Kupon',
-        status: 'Habis',
+        status: 'Tersedia',
     },
     {
         id: 7,
@@ -105,15 +105,6 @@ const products = [
         imageSrc: 'https://id-test-11.slatic.net/p/2e3e599ed4b84a4e716c0d6cd4f78fd1.jpg',
         imageAlt: "Galon Keran + Air",
         price: '70 Kupon',
-        status: 'Tersedia',
-    },
-    {
-        id: 12,
-        name: 'Stand Mixer Miyako SM625 Pencampur LIMITED',
-        href: '#',
-        imageSrc: 'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-12882705/miyako_miyako_full01.jpg',
-        imageAlt: "Stand Mixer",
-        price: '250 Kupon',
         status: 'Tersedia',
     },
     
