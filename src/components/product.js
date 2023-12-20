@@ -33,7 +33,7 @@ const products = [
         imageSrc: 'https://www.miyako.co.id/wp-content/uploads/2019/05/MCM-528-cover.png',
         imageAlt: "Magic Warmer",
         price: '350 Kupon',
-        status: 'Tersedia',
+        status: 'Tidak Tersedia',
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ const products = [
         imageSrc: 'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//108/MTA-54736785/oem_oem_full01.jpg',
         imageAlt: "Kompor Gas Rinnai RI-522C Dua Tungku",
         price: '400 Kupon',
-        status: 'Tersedia',
+        status: 'Tidak Tersedia',
     },
     {
         id: 6,
