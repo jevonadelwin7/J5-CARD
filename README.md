@@ -13,7 +13,7 @@
 
 # Deploy
 
-### `npm run deploy`
+### `yarn run deploy`
 
 
 
