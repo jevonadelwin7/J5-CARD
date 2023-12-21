@@ -1,17 +1,25 @@
-   import products from './product'
+   //import products from './product'
    import React, { useState, useEffect } from 'react'
-
+   import axios from "axios";
     
     export default function Example() {
           //initialise search value
   const [searchValue, setSearchValue] = useState("")
   const [product, setProducts] = useState("")
+  const baseURL = "https://script.googleusercontent.com/macros/echo?user_content_key=AArn8UxWg1fd8y6vvjrnGLqhW6vPKXAeMtlPnaFe_zyb0iY0r18YDHoYL9pyl-ciSuwWW8Sw4TdAWb0RTnrLMQPZrAXK4r1gm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnDa0y51da8lLcUch3ZST_V4QEoVb2Wt_oBaK0VCYAWm7e6jaX7IedROfUww1QCCQuQgnQ1f7tyLvkiNePIHvIkt25ZnzAxFfsg&lib=MIvACqJ9QsFYAqlw4X9yn7uRAXAZfkukt";
         //whenever search value gets updated, we will update patience list
-  useEffect(() => {
-    const newProducts = products.filter(value => value.name.toLowerCase().includes(searchValue.toLowerCase())||value.status.toLowerCase().includes(searchValue.toLowerCase()))
-    setProducts(newProducts)
-  }, [searchValue])
+//   useEffect(() => {
+//     const newProducts = products.filter(value => value.name.toLowerCase().includes(searchValue.toLowerCase())||value.status.toLowerCase().includes(searchValue.toLowerCase()))
+//     setProducts(newProducts)
+//   }, [searchValue])
+React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+        setProducts(response.data);
+        console.log(response.data);
+    });
+  }, []);
 
+  if (!product) return null;
         return (
         <div className="bg-white dark:bg-gray-600">
             <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -56,24 +64,24 @@ Whatsapp
         </div>
     </div>            
 </div>
-))):(products.map((product) => (
+))):(product.map((p) => (
     <div class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 drop-shadow-lG">
     
 <a >
 <img class="p-8 rounded-t-lg"
-src={product.imageSrc}
-alt={product.imageAlt} />
+src={p.imageSrc}
+alt={p.imageAlt} />
 </a>
 <div class="px-5 pb-5">
 <a >
-    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{product.name}</h5>
+    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{p.name}</h5>
 </a>
 <div class="flex items-center mt-2.5 mb-5">
     
-    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ">{product.price}</span>
-    {product.status === "Tersedia" ?(  
-    <span class="bg-green-100 text-white-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-white-800 ">{product.status}</span>
-    ):(<span class="bg-red-100 text-white-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-white-800 ">{product.status}</span>
+    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ">{p.price}</span>
+    {p.status === "Tersedia" ?(  
+    <span class="bg-green-100 text-white-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-white-800 ">{p.status}</span>
+    ):(<span class="bg-red-100 text-white-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-white-800 ">{p.status}</span>
     )}
 </div>
 <div class="flex justify-between items-center">
@@ -83,7 +91,7 @@ alt={product.imageAlt} />
 
 &nbsp;Hubungi
 </a>    
-                <a href={`https://api.whatsapp.com/send?phone=62 813-63865440&text=*${product.name}*%0A%0ASaya%20tertarik%20untuk%20menukar%20${product.name}%20dengan%20kartu%20saya.%20Apakah%20stok%20barang%20masih%20tersedia%3F%20Terimakasih%0A%0A%0Ahttp://adelw.in/J5-CARD/`} class="text-white text-sm flex mr-2 bg-green-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <a href={`https://api.whatsapp.com/send?phone=62 813-63865440&text=*${p.name}*%0A%0ASaya%20tertarik%20untuk%20menukar%20${p.name}%20dengan%20kartu%20saya.%20Apakah%20stok%20barang%20masih%20tersedia%3F%20Terimakasih%0A%0A%0Ahttp://adelw.in/J5-CARD/`} class="text-white text-sm flex mr-2 bg-green-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
 </svg>
 &nbsp;WA
