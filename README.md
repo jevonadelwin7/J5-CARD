@@ -9,7 +9,7 @@
 
 ### `git add .`
 ### `git commit -m 'add comment here'`
-### `git push origin main`
+### `git push origin master`
 
 # Deploy
 
